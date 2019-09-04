@@ -9,5 +9,6 @@ public:
     virtual ~tskCarBase() = default;
 
     virtual bool CheckCargo(const tskCargo&) const = 0;
+    virtual void print() = 0;
 };
 

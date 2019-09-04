@@ -12,13 +12,13 @@ void print_list(const std::vector<int>& a_list)
     }
 }
 
-void inc(std::vector<int>::iterator a_val, std::vector<int>::iterator a_end)
+void increment(std::vector<int>::iterator a_val, std::vector<int>::iterator a_end)
 {
     if (a_val == a_end) return;
 
     ++(*a_val);
     ++(a_val);
-    inc(a_val, a_end);
+    increment(a_val, a_end);
 }
 
 int main()
@@ -30,7 +30,7 @@ int main()
     print_list(list);
     std::cout << std::endl;
 
-    inc(list.begin(), list.end());
+    increment(list.begin(), list.end());
 
     std::cout << "Processed list: ";
     print_list(list);

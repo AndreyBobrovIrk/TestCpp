@@ -10,6 +10,18 @@
 #include "tskCar1.h"
 #include "tskCar2.h"
 
+void print_list(const std::vector< std::shared_ptr<tskCarBase>>& a_list)
+{
+    int n = 0;
+    for (auto car : a_list)
+    {
+        std::cout << ++n << ") ";
+        car->print();
+    }
+
+    std::cout << std::endl;
+}
+
 int main()
 {
     std::cout << "Task #2" << std::endl;
@@ -24,7 +36,11 @@ int main()
     car_list.emplace_back(new tskCar2(5.6));
 
     std::cout << "Unfiltered list:" << std::endl;
+    print_list(car_list);
     tskCargo cargo(6, 4);
+
+    std::cout << "Cargo:" << " Max weight: " << cargo.get_weight() << "; Max volume: " << cargo.get_volume() << std::endl;
+    std::cout << std::endl;
 
     auto new_end = std::remove_if(
         car_list.begin(),
@@ -33,4 +49,7 @@ int main()
     );
 
     car_list.erase(new_end, car_list.end());
+
+    std::cout << "Filtered list:" << std::endl;
+    print_list(car_list);
 }

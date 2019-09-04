@@ -13,7 +13,7 @@ void print_list(const std::vector<tskCar>& a_list)
     int n = 0;
     for (auto car : a_list)
     {
-        std::cout << " - #" << ++n <<
+        std::cout << ++n << ") " <<
             " Max weight: " << car.get_max_weight() <<
             " Max volume: " << car.get_max_volume() <<
             std::endl;

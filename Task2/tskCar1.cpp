@@ -1,4 +1,5 @@
 #include "pch.h"
+#include <iostream>
 #include "tskCar1.h"
 
 
@@ -22,4 +23,9 @@ bool tskCar1::CheckCargo(const tskCargo& a_cargo) const
 {
     return m_max_weight >= a_cargo.get_weight() &&
         m_max_volume >= a_cargo.get_volume();
+}
+
+void tskCar1::print()
+{
+    std::cout << "Max weight: " << m_max_weight << "; Max volume: " << m_max_volume << std::endl;
 }

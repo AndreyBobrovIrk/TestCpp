@@ -12,6 +12,7 @@ public:
 
     double get_max_weight() const;
     virtual bool CheckCargo(const tskCargo&) const override;
+    void print() override;
 
 private:
     double m_max_weight = 0;

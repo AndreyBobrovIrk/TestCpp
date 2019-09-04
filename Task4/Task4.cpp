@@ -10,13 +10,10 @@
 #include "tskCargo.h"
 
 template<typename C>
-void inc(std::vector<C>& a_list)
-{
-
-}
+void increment(std::vector<C>& a_list);
 
 template<>
-void inc(std::vector<int>& a_list)
+void increment(std::vector<int>& a_list)
 {
     for (int& i : a_list) {
         ++i;
@@ -24,7 +21,7 @@ void inc(std::vector<int>& a_list)
 }
 
 template<>
-void inc(std::vector<tskCar>& a_list)
+void increment(std::vector<tskCar>& a_list)
 {
     for (tskCar& o : a_list) {
         o.set_max_weight(o.get_max_weight() + 1);
@@ -33,7 +30,7 @@ void inc(std::vector<tskCar>& a_list)
 }
 
 template<>
-void inc(std::vector<tskCargo>& a_list)
+void increment(std::vector<tskCargo>& a_list)
 {
     for (tskCargo& o : a_list) {
         o.set_weight(o.get_weight() + 1);
@@ -63,7 +60,7 @@ int main()
         tskCargo(5, 5)
     };
 
-    inc<int>(num_list);
-    inc<tskCar>(car_list);
-    inc<tskCargo>(cargo_list);
+    increment<int>(num_list);
+    increment<tskCar>(car_list);
+    increment<tskCargo>(cargo_list);
 }
