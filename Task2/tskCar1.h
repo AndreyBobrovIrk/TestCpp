@@ -7,16 +7,16 @@ public:
 public:
     tskCar1() = delete;
 
-    tskCar1(double a_weight, double a_volume);
+    tskCar1(double a_max_weight, double a_volume);
 
     ~tskCar1() = default;
 
-    double get_weight() const;
-    double get_volume() const;
-    bool CheckCargo(const tskCargo&) const override;
+    double get_max_weight() const;
+    double get_max_volume() const;
+    bool CheckCargo(const tskCargo& a_cargo) const override;
 
 private:
-    double m_weight = 0;
-    double m_volume = 0;
+    double m_max_weight = 0;
+    double m_max_volume = 0;
 };
 

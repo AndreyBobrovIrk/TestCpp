@@ -9,10 +9,10 @@ public:
 
     ~tskCar() = default;
 
-    double get_weight() const;
-    double get_volume() const;
+    double get_max_weight() const;
+    double get_max_volume() const;
 
 private:
-    double m_weight = 0;
-    double m_volume = 0;
+    double m_max_weight = 0;
+    double m_max_volume = 0;
 };

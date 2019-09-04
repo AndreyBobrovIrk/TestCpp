@@ -27,8 +27,8 @@ template<>
 void inc(std::vector<tskCar>& a_list)
 {
     for (tskCar& o : a_list) {
-        o.set_weight(o.get_weight() + 1);
-        o.set_volume(o.get_volume() + 1);
+        o.set_max_weight(o.get_max_weight() + 1);
+        o.set_max_volume(o.get_max_volume() + 1);
     }
 }
 

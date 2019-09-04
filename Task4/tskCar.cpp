@@ -1,28 +1,28 @@
 #include "pch.h"
 #include "tskCar.h"
 
-tskCar::tskCar(double a_weight, double a_volume)
+tskCar::tskCar(double a_max_weight, double a_max_volume)
 {
-    m_weight = a_weight;
-    m_volume = a_volume;
+    m_max_weight = a_max_weight;
+    m_max_volume = a_max_volume;
 }
 
-double tskCar::get_weight() const
+double tskCar::get_max_weight() const
 {
-    return m_weight;
+    return m_max_weight;
 }
 
-void tskCar::set_weight(double a_value)
+void tskCar::set_max_weight(double a_value)
 {
-    m_weight = a_value;
+    m_max_weight = a_value;
 }
 
-double tskCar::get_volume() const
+double tskCar::get_max_volume() const
 {
-    return m_volume;
+    return m_max_volume;
 }
 
-void tskCar::set_volume(double a_value)
+void tskCar::set_max_volume(double a_value)
 {
-    m_volume = a_value;
+    m_max_volume = a_value;
 }

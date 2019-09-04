@@ -14,8 +14,8 @@ void print_list(const std::vector<tskCar>& a_list)
     for (auto car : a_list)
     {
         std::cout << " - #" << ++n <<
-            " Weight: " << car.get_weight() <<
-            " Volume: " << car.get_volume() <<
+            " Max weight: " << car.get_max_weight() <<
+            " Max volume: " << car.get_max_volume() <<
             std::endl;
     }
 }
@@ -41,8 +41,8 @@ int main()
         car_list.begin(),
         car_list.end(),
         [](const tskCar& o1, const tskCar& o2) {
-            if (o1.get_weight() != o2.get_weight()) return o1.get_weight() > o2.get_weight();
-            return o1.get_volume() > o2.get_volume();
+            if (o1.get_max_weight() != o2.get_max_weight()) return o1.get_max_weight() > o2.get_max_weight();
+            return o1.get_max_volume() > o2.get_max_volume();
         }
     );
 
