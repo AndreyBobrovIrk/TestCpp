@@ -4,7 +4,7 @@ class tskCargo
 {
 public:
     tskCargo() = default;
-    ~tskCargo() = default;
+    virtual ~tskCargo() = default;
 
     double get_weight() const;
     void set_weight(double a_value);

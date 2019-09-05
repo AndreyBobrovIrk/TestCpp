@@ -4,7 +4,7 @@ class tskCar
 {
 public:
     tskCar() = default;
-    ~tskCar() = default;
+    virtual ~tskCar() = default;
 
     double get_max_weight() const;
     void set_max_weight(double a_value);

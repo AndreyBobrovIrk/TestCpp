@@ -5,7 +5,7 @@ class tskNamedObject : public C
 {
 public:
     tskNamedObject() = default;
-    ~tskNamedObject() = default;
+    virtual ~tskNamedObject() = default;
 
     void print() override 
     {
